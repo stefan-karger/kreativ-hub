@@ -1,0 +1,84 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.3/schema.json",
+  "files": {
+    "includes": ["**", "!**/routeTree.gen.ts"]
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [":NODE:", ":BUN:"],
+              ":BLANK_LINE:",
+              ["solid-js", "solid-js/**"],
+              "@solidjs/**",
+              ":BLANK_LINE:",
+              ":PACKAGE:",
+              ":BLANK_LINE:",
+              [":ALIAS:", ":PARENT:", ":SIBLING:", ":INDEX:"],
+              ":BLANK_LINE:",
+              "**"
+            ]
+          }
+        },
+        "useSortedAttributes": "on"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "semicolons": "asNeeded",
+      "trailingCommas": "none"
+    }
+  },
+  "linter": {
+    "rules": {
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "complexity": {
+        "noVoid": "error"
+      },
+      "correctness": {
+        "noSolidDestructuredProps": "error"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "error",
+          "options": {
+            "functions": ["clsx", "cva", "cn"]
+          }
+        }
+      },
+      "performance": {
+        "useSolidForComponent": "error",
+        "useTopLevelRegex": "error"
+      },
+      "style": {
+        "noParameterAssign": "error",
+        "noUselessElse": "error",
+        "useBlockStatements": "error",
+        "useCollapsedElseIf": "error",
+        "useCollapsedIf": "error",
+        "useConsistentArrayType": "error",
+        "useConsistentCurlyBraces": "error",
+        "useDefaultParameterLast": "error",
+        "useSelfClosingElements": "error"
+      },
+      "suspicious": {
+        "noReactSpecificProps": "error",
+        "noEmptyBlockStatements": "error"
+      }
+    }
+  }
+}

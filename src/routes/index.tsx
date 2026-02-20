@@ -1,13 +1,13 @@
-import { A } from "@solidjs/router"
+import { createFileRoute } from '@tanstack/solid-router'
 
-import { Button } from "~/components/ui/button"
+export const Route = createFileRoute('/')({
+  component: Home,
+})
 
-export default function Home() {
+function Home() {
   return (
-    <div class="flex h-screen items-center justify-center">
-      <Button as={A} href="/dashboard">
-        COME IN!
-      </Button>
+    <div class="p-2">
+      <h3>Welcome Home!!!</h3>
     </div>
   )
 }

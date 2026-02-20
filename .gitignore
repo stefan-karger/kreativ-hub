@@ -20,6 +20,7 @@ app.config.timestamp_*.js
 .classpath
 *.launch
 .settings/
+.vscode
 
 # Temp
 gitignore
@@ -27,3 +28,7 @@ gitignore
 # System Files
 .DS_Store
 Thumbs.db
+
+# tanstack
+.tanstack
+.nitro
